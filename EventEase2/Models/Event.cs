@@ -1,0 +1,33 @@
+﻿using System;
+
+namespace EventEase2
+{
+    public class Event
+    {
+        
+            public int EventId { get; set; }
+            public required string EventName { get; set; }
+            public DateTime EventDate { get; set; }
+            public required string Description { get; set; }
+
+            public int? VenueId { get; set; }
+            public required Venues Venue { get; set; }
+
+            public required ICollection<Bookings> Bookings { get; set; }
+        public string? ImageUrl { get; set; }
+    }
+}
+
+
+
+
+//Reference List for code:
+
+//Date: 13 May 2025
+
+//Author: Darsh Somayi
+
+//Sourced: Harrison, W., 2022. Azure for Developers: Implement rich Azure PaaS ecosystems using containers, serverless services, and more. Packt Publishing.
+
+
+
