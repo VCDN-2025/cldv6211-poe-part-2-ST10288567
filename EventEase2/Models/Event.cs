@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventEase2.Models;
+using System;
 
 namespace EventEase2
 {
@@ -15,6 +16,10 @@ namespace EventEase2
 
             public required ICollection<Bookings> Bookings { get; set; }
         public string? ImageUrl { get; set; }
+
+        public int EventTypeId { get; set; }
+        public EventType? EventType { get; set; }
+
     }
 }
 
@@ -23,7 +28,7 @@ namespace EventEase2
 
 //Reference List for code:
 
-//Date: 13 May 2025
+//Date: 23 june 2025
 
 //Author: Darsh Somayi
 

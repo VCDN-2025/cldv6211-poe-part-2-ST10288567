@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|c:\\users\\lab_services_student\\desktop\\eventease2\\eventease2\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|solutionrelative:eventease2\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|c:\\users\\lab_services_student\\desktop\\eventease2\\eventease2\\models\\bookingfilterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|solutionrelative:eventease2\\models\\bookingfilterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|c:\\users\\lab_services_student\\desktop\\eventease2\\eventease2\\models\\venues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|solutionrelative:eventease2\\models\\venues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|c:\\users\\lab_services_student\\desktop\\eventease2\\eventease2\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|solutionrelative:eventease2\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|c:\\users\\lab_services_student\\desktop\\eventease2\\eventease2\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|solutionrelative:eventease2\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|c:\\users\\lab_services_student\\desktop\\eventease2\\eventease2\\models\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92B25767-6143-4DE8-801E-FDC84C458AC4}|EventEase2\\EventEase2.csproj|solutionrelative:eventease2\\models\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,30 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookingFilterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\BookingFilterViewModel.cs",
+              "RelativeDocumentMoniker": "EventEase2\\Models\\BookingFilterViewModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\BookingFilterViewModel.cs",
+              "RelativeToolTip": "EventEase2\\Models\\BookingFilterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T19:27:57.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "EventEase2\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "EventEase2\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T19:21:35.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "EventEase2\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "EventEase2\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T19:21:30.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Venues.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\Venues.cs",
+              "RelativeDocumentMoniker": "EventEase2\\Models\\Venues.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\Venues.cs",
+              "RelativeToolTip": "EventEase2\\Models\\Venues.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T19:20:36.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "EventEase2\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\Event.cs",
+              "RelativeToolTip": "EventEase2\\Models\\Event.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T19:20:33.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Bookings.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\Bookings.cs",
               "RelativeDocumentMoniker": "EventEase2\\Models\\Bookings.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Models\\Bookings.cs",
               "RelativeToolTip": "EventEase2\\Models\\Bookings.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA4wB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T21:08:55.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Views\\Events\\Create.cshtml",
               "RelativeDocumentMoniker": "EventEase2\\Views\\Events\\Create.cshtml",
               "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\EventEase2\\EventEase2\\Views\\Events\\Create.cshtml",
               "RelativeToolTip": "EventEase2\\Views\\Events\\Create.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-13T18:25:10.974Z",
               "EditorCaption": ""
