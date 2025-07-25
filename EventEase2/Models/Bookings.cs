@@ -1,24 +1,37 @@
 ﻿using System;
+using EventEase2.Models;
 
 namespace EventEase2
 {
+    // Represents a booking made for an event at a specific venue
     public class Bookings
     {
+        // Primary key: Unique identifier for each booking
+        public int BookingsId { get; set; }
 
-       
-            public int BookingsId { get; set; }
-            public DateTime BookingsDate { get; set; }
+        // The date and time the booking was made or scheduled for
+        public DateTime BookingsDate { get; set; }
 
-            public int EventId { get; set; }
-            public required Event Event { get; set; }
+        // Foreign key: Links the booking to a specific event
+        public int EventId { get; set; }
 
-            public int VenueId { get; set; }
-            public required Venues Venues { get; set; }
+        // Navigation property: Represents the associated event
+        public required Models.Event Event { get; set; }
 
-            public required string CustomerName { get; set; }
-            public required string CustomerEmail { get; set; }
-            public required string CustomerPhone { get; set; }
-        
+        // Foreign key: Links the booking to a specific venue
+        public int VenueId { get; set; }
+
+        // Navigation property: Represents the associated venue
+        public required Venues Venues { get; set; }
+
+        // The full name of the customer who made the booking
+        public required string CustomerName { get; set; }
+
+        // The email address of the customer
+        public required string CustomerEmail { get; set; }
+
+        // The phone number of the customer
+        public required string CustomerPhone { get; set; }
     }
 }
 

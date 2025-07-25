@@ -39,11 +39,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.BookingsDate)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Event.EventId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Venues.VenuesId)
+                <td>
+
+                    @item.Event?.EventName
+                </td>
+                <td>
+                    @item.Venues?.VenuesName
+                
+
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CustomerName)

@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using EventEase2.Data;
+using EventEase2.Models;
+
+
 
 namespace EventEase2.Controllers
 {
@@ -25,7 +28,9 @@ namespace EventEase2.Controllers
         // GET: Events
         public async Task<IActionResult> Index()
         {
-            var events = _context.Events.Include(v => v.Venue);
+            var events = _context.Events
+                .Include(v => v.Venue)
+                .Include(e => e.EventType); 
             return View(await events.ToListAsync());
         }
 
@@ -36,6 +41,7 @@ namespace EventEase2.Controllers
 
             var @event = await _context.Events
                 .Include(v => v.Venue)
+                .Include(e => e.EventType)
                 .FirstOrDefaultAsync(m => m.EventId == id);
 
             if (@event == null) return NotFound();
@@ -46,14 +52,15 @@ namespace EventEase2.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
-            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesId");
+            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesName");
+            ViewData["EventTypeId"] = new SelectList(_context.EventTypes, "EventTypeId", "Name"); 
             return View();
         }
 
         // POST: Events/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EventId,EventName,EventDate,Description,VenueId")] Event @event, IFormFile? ImageFile)
+        public async Task<IActionResult> Create([Bind("EventId,EventName,EventDate,Description,VenueId,EventTypeId")] Event @event, IFormFile? ImageFile)
         {
             if (ModelState.IsValid)
             {
@@ -68,7 +75,8 @@ namespace EventEase2.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesId", @event.VenueId);
+            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesName", @event.VenueId);
+            ViewData["EventTypeId"] = new SelectList(_context.EventTypes, "EventTypeId", "Name", @event.EventTypeId);
             return View(@event);
         }
 
@@ -80,14 +88,15 @@ namespace EventEase2.Controllers
             var @event = await _context.Events.FindAsync(id);
             if (@event == null) return NotFound();
 
-            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesId", @event.VenueId);
+            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesName", @event.VenueId);
+            ViewData["EventTypeId"] = new SelectList(_context.EventTypes, "EventTypeId", "Name", @event.EventTypeId); 
             return View(@event);
         }
 
         // POST: Events/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EventId,EventName,EventDate,Description,VenueId,ImageUrl")] Event @event)
+        public async Task<IActionResult> Edit(int id, [Bind("EventId,EventName,EventDate,Description,VenueId,ImageUrl,EventTypeId")] Event @event)
         {
             if (id != @event.EventId) return NotFound();
 
@@ -106,7 +115,8 @@ namespace EventEase2.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesId", @event.VenueId);
+            ViewData["VenueId"] = new SelectList(_context.Venues, "VenuesId", "VenuesName", @event.VenueId);
+            ViewData["EventTypeId"] = new SelectList(_context.EventTypes, "EventTypeId", "Name", @event.EventTypeId); 
             return View(@event);
         }
 
@@ -117,6 +127,7 @@ namespace EventEase2.Controllers
 
             var @event = await _context.Events
                 .Include(v => v.Venue)
+                .Include(e => e.EventType)
                 .FirstOrDefaultAsync(m => m.EventId == id);
 
             if (@event == null) return NotFound();
@@ -152,7 +163,7 @@ namespace EventEase2.Controllers
             return _context.Events.Any(e => e.EventId == id);
         }
 
-        // Secure Image Upload using Azure Blob
+        // Azure Blob Upload
         private async Task<string> UploadImageToBlobAsync(IFormFile imageFile)
         {
             string connectionString = _configuration["AzureStorage:ConnectionString"];

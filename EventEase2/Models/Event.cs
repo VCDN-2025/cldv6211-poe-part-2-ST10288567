@@ -1,26 +1,14 @@
-﻿using EventEase2.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using EventEase2.Models;
+
 using System;
+using System.Collections.Generic;
 
-namespace EventEase2
+namespace EventEase2.Models
 {
-    public class Event
-    {
-        
-            public int EventId { get; set; }
-            public required string EventName { get; set; }
-            public DateTime EventDate { get; set; }
-            public required string Description { get; set; }
-
-            public int? VenueId { get; set; }
-            public required Venues Venue { get; set; }
-
-            public required ICollection<Bookings> Bookings { get; set; }
-        public string? ImageUrl { get; set; }
-
-        public int EventTypeId { get; set; }
-        public EventType? EventType { get; set; }
-
-    }
+    public record Event(int EventId, string EventName, DateTime EventDate, string Description, int? VenueId, Venues Venue, ICollection<Bookings>? Bookings, string? ImageUrl, int EventTypeId, EventType? EventType);
 }
 
 
@@ -36,3 +24,15 @@ namespace EventEase2
 
 
 
+//Comments
+
+// Unique identifier for the event (Primary Key)
+// Name of the event (e.g., "Tech Conference 2025")
+// Date and time when the event is scheduled
+// Detailed description of the event
+// Nullable foreign key linking to the venue
+// Navigation property representing the venue details
+// Collection of bookings related to the event (nullable)
+// Optional URL to the event image stored in Azure Blob Storage
+// Foreign key to identify the event type
+// Navigation property representing the event type (nullable)

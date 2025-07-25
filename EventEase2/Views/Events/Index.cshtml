@@ -1,4 +1,6 @@
-﻿@model IEnumerable<EventEase2.Event>
+﻿
+
+@model IEnumerable<EventEase2.Event>
 
 @{
     ViewData["Title"] = "Index";
@@ -38,12 +40,15 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
+
+                <td>
+                    @item?.EventType?.Name
+
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Venue.VenuesId)
-
-
-
+                <td>
+                        @item?.Venue?.VenuesName??
+               
 
             </td>
             <td>
